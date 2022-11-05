@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import {io} from 'socket.io-client';
+import { Button } from 'antd';
+import 'antd/dist/antd.css';
+
+
+const socket = io("http://localhost:3010/")
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      hello frontend chatapp
+      <Button type="primary">Button</Button>
     </div>
   );
 }
